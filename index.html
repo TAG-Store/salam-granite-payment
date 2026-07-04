@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AL-SALAM GRANITE – Payment Page</title>
+<meta name="description" content="مصنع السلام الصيني للجرانيت المصري – ادفع بسهولة وأمان">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg-glow"></div>
+
+  <main class="page">
+
+    <!-- ===== Logo ===== -->
+    <header class="logo-frame">
+      <div class="gem-icon" aria-hidden="true">
+        <svg viewBox="0 0 64 56" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="32,2 50,18 62,18 46,54 18,54 2,18 14,18"
+                   fill="none" stroke="currentColor" stroke-width="3"
+                   stroke-linejoin="round" stroke-linecap="round"/>
+          <polyline points="14,18 32,2 50,18" fill="none" stroke="currentColor" stroke-width="2.4"/>
+          <polyline points="2,18 62,18" fill="none" stroke="currentColor" stroke-width="2.4"/>
+          <polyline points="32,2 46,54" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <polyline points="32,2 18,54" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+      </div>
+      <h1 class="logo-text">
+        <span class="logo-main">AL-SALAM</span>
+        <span class="logo-sub">GRANITE</span>
+      </h1>
+    </header>
+
+    <p class="page-title">AL-SALAM GRANITE <span class="dash">–</span> Payment Page</p>
+    <p class="arabic-sub">مصنع السلام الصيني للجرانيت المصري &mdash; ادفع بسهولة وأمان</p>
+
+    <!-- ===== Payment Methods ===== -->
+    <section class="section" aria-labelledby="methods-heading">
+      <h2 id="methods-heading" class="section-title">Payment Methods</h2>
+
+      <div class="cards-grid">
+
+        <article class="pay-card">
+          <div class="pay-card-head">
+            <span class="pay-icon" aria-hidden="true">◆</span>
+            <h3>Instapay</h3>
+          </div>
+          <p class="pay-number" data-number="01091855903">01091855903</p>
+          <button class="copy-btn" data-copy="01091855903" type="button">
+            Copy Number
+          </button>
+        </article>
+
+        <article class="pay-card">
+          <div class="pay-card-head">
+            <span class="pay-icon" aria-hidden="true">◆</span>
+            <h3>Vodafone Cash</h3>
+          </div>
+          <p class="pay-number" data-number="01000462112">01000462112</p>
+          <button class="copy-btn" data-copy="01000462112" type="button">
+            Copy Number
+          </button>
+        </article>
+
+        <article class="pay-card">
+          <div class="pay-card-head">
+            <span class="pay-icon" aria-hidden="true">◆</span>
+            <h3>Etisalat Cash</h3>
+          </div>
+          <p class="pay-number" data-number="01146618871">01146618871</p>
+          <button class="copy-btn" data-copy="01146618871" type="button">
+            Copy Number
+          </button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== QR Code (Official Instapay QR) ===== -->
+    <section class="section qr-section" aria-labelledby="qr-heading">
+      <h2 id="qr-heading" class="section-title">Scan &amp; Pay via Instapay</h2>
+      <div class="qr-frame">
+        <img src="instapay-qr.jpg" alt="Instapay QR Code - jjalp@instapay" class="qr-image">
+      </div>
+      <p class="qr-caption">Scan with the Instapay app to pay instantly</p>
+      <p class="qr-ipa">jjalp@instapay</p>
+    </section>
+
+    <!-- ===== How to Pay ===== -->
+    <section class="section how-section" aria-labelledby="how-heading">
+      <h2 id="how-heading" class="section-title">How to Pay</h2>
+      <ol class="how-list">
+        <li>Scan the QR code using the Instapay app, or choose another method below.</li>
+        <li>Choose your payment method.</li>
+        <li>Send the payment.</li>
+        <li>Keep the payment screenshot if needed.</li>
+      </ol>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <p class="footer-brand">AL-SALAM GRANITE</p>
+      <p class="footer-thanks">Thank you for your support ❤️</p>
+    </footer>
+
+  </main>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite">Number copied successfully.</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
