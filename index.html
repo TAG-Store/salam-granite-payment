@@ -87,6 +87,15 @@
       <p class="qr-ipa">jjalp@instapay</p>
     </section>
 
+    <!-- ===== QR Code (Opens this website) ===== -->
+    <section class="section qr-section" aria-labelledby="qr-site-heading">
+      <h2 id="qr-site-heading" class="section-title">Scan to Open This Page</h2>
+      <div class="qr-frame">
+        <div id="qrcode"></div>
+      </div>
+      <p class="qr-caption">Scan with any camera to open this website</p>
+    </section>
+
     <!-- ===== How to Pay ===== -->
     <section class="section how-section" aria-labelledby="how-heading">
       <h2 id="how-heading" class="section-title">How to Pay</h2>
@@ -109,6 +118,8 @@
   <!-- Toast -->
   <div id="toast" class="toast" role="status" aria-live="polite">Number copied successfully.</div>
 
+  <!-- QRCode.js via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
