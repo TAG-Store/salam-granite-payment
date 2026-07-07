@@ -1,0 +1,67 @@
+// ==========================================================================
+// AL-SALAM GRANITE — Payment Page Script
+// - Copy payment numbers to clipboard
+// - The QR code on this page is the official Instapay QR (static image),
+//   generated from within the Instapay app itself, so it can be scanned
+//   directly by the Instapay app to pay instantly.
+// ==========================================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const toast = document.getElementById('toast');
+  let toastTimer = null;
+
+  function showToast(message) {
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.remove('show');
+    }, 2200);
+  }
+
+  async function copyNumber(number) {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(number);
+      } else {
+        // Fallback for older browsers / non-secure contexts
+        const tempInput = document.createElement('textarea');
+        tempInput.value = number;
+        tempInput.style.position = 'fixed';
+        tempInput.style.opacity = '0';
+        document.body.appendChild(tempInput);
+        tempInput.focus();
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+      }
+      showToast('Number copied successfully.');
+    } catch (err) {
+      showToast('Copy failed. Please copy manually.');
+    }
+  }
+
+  document.querySelectorAll('.copy-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const number = btn.getAttribute('data-copy');
+      copyNumber(number);
+    });
+  });
+
+  /* ---------- Real QR Code pointing to the current page ---------- */
+  const qrContainer = document.getElementById('qrcode');
+
+  if (qrContainer && typeof QRCode !== 'undefined') {
+    // window.location.href always resolves to the live Vercel URL after deployment
+    new QRCode(qrContainer, {
+      text: window.location.href,
+      width: 180,
+      height: 180,
+      colorDark: '#0d0a06',
+      colorLight: '#f3d98b',
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  }
+
+});
