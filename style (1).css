@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AL-SALAM GRANITE — Luxury Payment Page
+   TAG STORE — Luxury Payment Page
    Palette:
      --black-deep:  #060504
      --black-soft:  #100d0a
@@ -108,18 +108,18 @@ body{
   transform:none;
 }
 
-.gem-icon{
-  width:42px;
+.crown-icon{
+  width:44px;
   color: var(--gold-light);
   filter: drop-shadow(0 0 6px rgba(243,217,139,0.5));
 }
-.gem-icon svg{ width:100%; height:auto; display:block; }
+.crown-icon svg{ width:100%; height:auto; display:block; }
 
 .logo-text{
   margin:2px 0 0;
   font-family:'Cormorant Garamond', serif;
   font-weight:700;
-  letter-spacing:0.1em;
+  letter-spacing:0.14em;
   line-height:1;
   display:flex;
   flex-direction:column;
@@ -127,20 +127,19 @@ body{
   text-align:center;
 }
 
-.logo-main{
-  font-size: clamp(1.7rem, 5.4vw, 2.5rem);
+.logo-tag{
+  font-size: clamp(2.1rem, 6vw, 3rem);
   background: linear-gradient(180deg, var(--gold-light), var(--gold) 60%, var(--gold-dim));
   -webkit-background-clip:text;
   background-clip:text;
   color:transparent;
-  white-space:nowrap;
 }
 
-.logo-sub{
-  font-size: clamp(0.9rem, 2.6vw, 1.2rem);
+.logo-store{
+  font-size: clamp(1rem, 3vw, 1.35rem);
   letter-spacing:0.5em;
   color: var(--gold);
-  margin-top:-2px;
+  margin-top:-4px;
 }
 
 /* ===================== Titles ===================== */
@@ -149,7 +148,7 @@ body{
   font-family:'Cormorant Garamond', serif;
   font-weight:600;
   font-style:italic;
-  font-size: clamp(1.05rem, 2.8vw, 1.4rem);
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
   color: var(--ivory);
   text-align:center;
   letter-spacing:0.02em;
@@ -163,8 +162,6 @@ body{
   color: var(--gold-light);
   margin: 0 0 36px;
   opacity:0.9;
-  text-align:center;
-  max-width:520px;
 }
 
 /* ===================== Sections ===================== */
@@ -280,20 +277,12 @@ body{
 .qr-section{ display:flex; flex-direction:column; align-items:center; }
 
 .qr-frame{
-  background: var(--ivory);
+  background: var(--black-card);
   border:1.5px solid var(--gold);
   border-radius:16px;
-  padding:14px;
+  padding:18px;
   box-shadow: var(--shadow-gold);
   display:inline-flex;
-}
-
-.qr-image{
-  width:190px;
-  height:190px;
-  display:block;
-  border-radius:6px;
-  object-fit:contain;
 }
 
 #qrcode{
@@ -315,17 +304,9 @@ body{
   letter-spacing:0.05em;
 }
 
-.qr-ipa{
-  margin-top:4px;
-  font-size:1rem;
-  color: var(--gold-light);
-  letter-spacing:0.04em;
-  direction:ltr;
-}
-
 /* ===================== How to Pay ===================== */
 .how-list{
-  max-width:520px;
+  max-width:480px;
   margin:0 auto;
   padding:0;
   list-style:none;
@@ -371,9 +352,9 @@ body{
 .footer-brand{
   font-family:'Cormorant Garamond', serif;
   font-weight:700;
-  letter-spacing:0.25em;
+  letter-spacing:0.3em;
   color: var(--gold);
-  font-size:1.05rem;
+  font-size:1.1rem;
   margin:0 0 6px;
 }
 
